@@ -42,5 +42,7 @@ public class snake_and_ladder {
 			}
 
 		}
+		System.out.println("Player 1 won!!");
+
 	}
 }
