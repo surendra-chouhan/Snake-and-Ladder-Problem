@@ -6,12 +6,15 @@ public class snake_and_ladder {
 	public static void main(String[] args) {
 		System.out.println("Welcome to Snake and Ladder Game");
 
+		int roll_index = 0;
 		int player_position = start_position;
 		System.out.println("Starting position of a player is : "+ player_position);
 
 		while (player_position < 100 && player_position >=0 ) {
 			int die_roll = (int)(Math.floor(Math.random() * 10 ) % 6) + 1;
 			System.out.println("The value of a die rolled is : " + die_roll);
+
+			roll_index++;
 
 			player_position += die_roll;
 			System.out.println("Player 1 position is : " + player_position);
@@ -41,8 +44,10 @@ public class snake_and_ladder {
 				player_position -= player_position;
 			}
 
+			System.out.println("For die roll " + roll_index + " position is : " + player_position);
+
 		}
 		System.out.println("Player 1 won!!");
-
+		System.out.println("Total number of times the die was rolled is : " + roll_index);
 	}
 }
